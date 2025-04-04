@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberProjectAI - Security Log Analyzer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Stili aggiuntivi inline per garantire il caricamento */
+        .init-hidden { display: none; }
+        .log-example {
+            background: rgba(0, 255, 127, 0.1);
+            border-left: 3px solid #00FF7F;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Cyber<span>Project</span>AI</div>
+            <div class="subtitle">Security Log Analyzer</div>
+        </div>
+    </header>
+    
+    <section class="chatbot">
+        <div class="container">
+            <div class="chatbox">
+                <div class="messages" id="messages">
+                    <div class="message bot-message">
+                        <img src="/static/bot-icon.png" class="message-icon" alt="Bot Icon">
+                        <div class="bot-response-content">
+                            <h2>🔍 CyberSecurity Logs Analyzer</h2>
+                            <p>Paste a security log in JSON format to get:</p>
+                            <ul>
+                                <li>MITRE ATT&CK Technical Identification</li>
+                                <li>Detailed analysis of indicators</li>
+                                <li>Customized mitigation plan</li>
+                            </ul>
+                            
+                            <div class="log-example">
+                                {
+                                    "timestamp": "2025-03-28T14:32:45Z",
+                                    "event_type": "Failed Login",
+                                    "source_ip": "192.168.1.100",
+                                    "username": "admin",
+                                    "attempts": 5
+                                }
+                            </div>
+                            <p class="init-hidden" id="json-valid"> ✓ Valid JSON format detected</p>
+                            <p class="init-hidden" id="json-invalid">⚠️ The log is not in a valid JSON format</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <div class="input-area">
+                    <textarea id="user-input" placeholder="Incolla il tuo log JSON qui..." rows="4"></textarea>
+                    <button class="send-btn" id="send-button">
+                        <i class="fas fa-shield-alt"></i> Analyze
+                    </button>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <button class="action-btn" data-example="failed-login">
+                    <i class="fas fa-sign-in-alt"></i> Failed Login
+                </button>
+                <button class="action-btn" data-example="brute-force">
+                    <i class="fas fa-hammer"></i> Brute Force
+                </button>
+                <button class="action-btn" data-example="malicious-process">
+                    <i class="fas fa-bug"></i> Suspect Trial
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>CyberProjectAI - Advanced security log analysis with MITRE ATT&CK identification</p>
+            <p>© 2025 - Thesis project in Computer Security</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/static/chatbot.js"></script>
+</body>
+</html>

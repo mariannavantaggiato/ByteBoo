@@ -1,0 +1,354 @@
+[
+    {
+      "timestamp": "2023-10-01T08:12:45Z",
+      "event_type": "authentication",
+      "severity": "high",
+      "source_ip": "192.168.1.105",
+      "user": "admin",
+      "description": "Multiple failed login attempts for user 'admin'"
+    },
+    {
+      "timestamp": "2023-10-01T08:13:22Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "source_ip": "10.0.0.12",
+      "user": "johndoe",
+      "description": "User 'johndoe' authenticated successfully via LDAP"
+    },
+    {
+      "timestamp": "2023-10-01T08:15:03Z",
+      "event_type": "firewall",
+      "severity": "critical",
+      "source_ip": "45.227.253.109",
+      "description": "Suspicious inbound connection detected (Port Scan)"
+    },
+    {
+      "timestamp": "2023-10-01T08:20:17Z",
+      "event_type": "database",
+      "severity": "medium",
+      "user": "app_user",
+      "description": "Unauthorized SQL query attempted"
+    },
+    {
+      "timestamp": "2023-10-01T08:22:34Z",
+      "event_type": "system",
+      "severity": "low",
+      "description": "Disk usage exceeds 90% on /dev/sda1"
+    },
+    {
+      "timestamp": "2023-10-01T08:25:11Z",
+      "event_type": "malware",
+      "severity": "critical",
+      "file": "/tmp/suspicious_script.sh",
+      "description": "Potential malware detected: Heuristic match for ransomware"
+    },
+    {
+      "timestamp": "2023-10-01T08:30:45Z",
+      "event_type": "network",
+      "severity": "medium",
+      "source_ip": "203.0.113.42",
+      "destination_ip": "192.168.1.200",
+      "description": "Unusual outbound traffic to known malicious IP"
+    },
+    {
+      "timestamp": "2023-10-01T08:35:22Z",
+      "event_type": "authentication",
+      "severity": "high",
+      "user": "service_account",
+      "description": "Service account locked due to excessive login failures"
+    },
+    {
+      "timestamp": "2023-10-01T08:40:01Z",
+      "event_type": "application",
+      "severity": "low",
+      "app": "web_app",
+      "description": "Session timeout for user_id=45321"
+    },
+    {
+      "timestamp": "2023-10-01T08:45:56Z",
+      "event_type": "intrusion_detection",
+      "severity": "critical",
+      "source_ip": "185.143.223.10",
+      "description": "Possible brute-force attack on SSH port (22)"
+    },
+    {
+      "timestamp": "2023-10-01T08:50:33Z",
+      "event_type": "system",
+      "severity": "medium",
+      "description": "Unexpected reboot detected, possible kernel panic"
+    },
+    {
+      "timestamp": "2023-10-01T08:55:19Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "auditor",
+      "description": "Successful login via SSH key"
+    },
+    {
+      "timestamp": "2023-10-01T09:00:07Z",
+      "event_type": "network",
+      "severity": "high",
+      "source_ip": "91.234.56.78",
+      "description": "DDoS attack detected from multiple IPs"
+    },
+    {
+      "timestamp": "2023-10-01T09:05:44Z",
+      "event_type": "database",
+      "severity": "critical",
+      "query": "DROP TABLE users;",
+      "description": "Malicious SQL injection attempt blocked"
+    },
+    {
+      "timestamp": "2023-10-01T09:10:28Z",
+      "event_type": "file_integrity",
+      "severity": "medium",
+      "file": "/etc/passwd",
+      "description": "Unauthorized modification detected"
+    },
+    {
+      "timestamp": "2023-10-01T09:15:12Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "backup_user",
+      "description": "Scheduled backup job started"
+    },
+    {
+      "timestamp": "2023-10-01T09:20:50Z",
+      "event_type": "firewall",
+      "severity": "high",
+      "source_ip": "198.51.100.33",
+      "description": "Blocked connection attempt to restricted port 3389 (RDP)"
+    },
+    {
+      "timestamp": "2023-10-01T09:25:37Z",
+      "event_type": "system",
+      "severity": "low",
+      "description": "High CPU usage detected (98%)"
+    },
+    {
+      "timestamp": "2023-10-01T09:30:15Z",
+      "event_type": "malware",
+      "severity": "critical",
+      "file": "/var/www/html/index.php",
+      "description": "Webshell detected and quarantined"
+    },
+    {
+      "timestamp": "2023-10-01T09:35:02Z",
+      "event_type": "network",
+      "severity": "medium",
+      "source_ip": "172.16.0.55",
+      "description": "Internal host scanning detected (NMAP activity)"
+    },
+    {
+      "timestamp": "2023-10-01T09:40:48Z",
+      "event_type": "authentication",
+      "severity": "high",
+      "user": "root",
+      "description": "Root login detected from non-whitelisted IP"
+    },
+    {
+      "timestamp": "2023-10-01T09:45:26Z",
+      "event_type": "application",
+      "severity": "low",
+      "app": "api_gateway",
+      "description": "Rate limit exceeded for client 192.168.1.150"
+    },
+    {
+      "timestamp": "2023-10-01T09:50:14Z",
+      "event_type": "intrusion_detection",
+      "severity": "critical",
+      "source_ip": "94.23.211.39",
+      "description": "Exploit attempt: CVE-2023-1234 (Apache Log4j)"
+    },
+    {
+      "timestamp": "2023-10-01T09:55:59Z",
+      "event_type": "system",
+      "severity": "medium",
+      "description": "Memory leak detected in process 'java'"
+    },
+    {
+      "timestamp": "2023-10-01T10:00:42Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "db_admin",
+      "description": "Database maintenance session started"
+    },
+    {
+      "timestamp": "2023-10-01T10:05:30Z",
+      "event_type": "network",
+      "severity": "high",
+      "source_ip": "223.71.167.89",
+      "description": "Blocked ICMP flood attack"
+    },
+    {
+      "timestamp": "2023-10-01T10:10:18Z",
+      "event_type": "database",
+      "severity": "critical",
+      "query": "SELECT * FROM credit_cards;",
+      "description": "Sensitive data access attempt logged"
+    },
+    {
+      "timestamp": "2023-10-01T10:15:03Z",
+      "event_type": "file_integrity",
+      "severity": "medium",
+      "file": "/bin/bash",
+      "description": "Binary file checksum mismatch"
+    },
+    {
+      "timestamp": "2023-10-01T10:20:47Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "monitoring",
+      "description": "Automated health check completed"
+    },
+    {
+      "timestamp": "2023-10-01T10:25:33Z",
+      "event_type": "firewall",
+      "severity": "high",
+      "source_ip": "176.34.89.12",
+      "description": "Blocked SQL injection attempt over HTTP"
+    },
+    {
+      "timestamp": "2023-10-01T10:30:20Z",
+      "event_type": "system",
+      "severity": "low",
+      "description": "Backup job completed successfully"
+    },
+    {
+      "timestamp": "2023-10-01T10:35:08Z",
+      "event_type": "malware",
+      "severity": "critical",
+      "file": "/tmp/.hidden_script",
+      "description": "Cryptocurrency miner detected and removed"
+    },
+    {
+      "timestamp": "2023-10-01T10:40:55Z",
+      "event_type": "network",
+      "severity": "medium",
+      "source_ip": "10.0.0.99",
+      "description": "Unusual internal traffic pattern detected"
+    },
+    {
+      "timestamp": "2023-10-01T10:45:41Z",
+      "event_type": "authentication",
+      "severity": "high",
+      "user": "guest",
+      "description": "Guest account accessed restricted area"
+    },
+    {
+      "timestamp": "2023-10-01T10:50:27Z",
+      "event_type": "application",
+      "severity": "low",
+      "app": "payment_gateway",
+      "description": "TLS handshake failed (unsupported cipher)"
+    },
+    {
+      "timestamp": "2023-10-01T10:55:14Z",
+      "event_type": "intrusion_detection",
+      "severity": "critical",
+      "source_ip": "51.89.123.76",
+      "description": "Zero-day exploit attempt (CVE-2023-5678)"
+    },
+    {
+      "timestamp": "2023-10-01T11:00:02Z",
+      "event_type": "system",
+      "severity": "medium",
+      "description": "Kernel module loaded without signature verification"
+    },
+    {
+      "timestamp": "2023-10-01T11:05:49Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "support_agent",
+      "description": "Remote support session initiated"
+    },
+    {
+      "timestamp": "2023-10-01T11:10:36Z",
+      "event_type": "network",
+      "severity": "high",
+      "source_ip": "193.201.88.45",
+      "description": "Blocked phishing attempt (fake login page)"
+    },
+    {
+      "timestamp": "2023-10-01T11:15:23Z",
+      "event_type": "database",
+      "severity": "critical",
+      "query": "UPDATE users SET password='hacked' WHERE id=1;",
+      "description": "Malicious database update blocked"
+    },
+    {
+      "timestamp": "2023-10-01T11:20:10Z",
+      "event_type": "file_integrity",
+      "severity": "medium",
+      "file": "/etc/shadow",
+      "description": "Unauthorized access attempt logged"
+    },
+    {
+      "timestamp": "2023-10-01T11:25:57Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "automation",
+      "description": "Automated script executed with elevated privileges"
+    },
+    {
+      "timestamp": "2023-10-01T11:30:44Z",
+      "event_type": "firewall",
+      "severity": "high",
+      "source_ip": "104.28.17.93",
+      "description": "Blocked connection to known C2 server"
+    },
+    {
+      "timestamp": "2023-10-01T11:35:31Z",
+      "event_type": "system",
+      "severity": "low",
+      "description": "Scheduled maintenance window started"
+    },
+    {
+      "timestamp": "2023-10-01T11:40:18Z",
+      "event_type": "malware",
+      "severity": "critical",
+      "file": "/usr/bin/curl",
+      "description": "Binary replaced with malicious version"
+    },
+    {
+      "timestamp": "2023-10-01T11:45:05Z",
+      "event_type": "network",
+      "severity": "medium",
+      "source_ip": "192.168.1.77",
+      "description": "Internal host performing port scanning"
+    },
+    {
+      "timestamp": "2023-10-01T11:50:52Z",
+      "event_type": "authentication",
+      "severity": "high",
+      "user": "admin",
+      "description": "Admin password changed without MFA verification"
+    },
+    {
+      "timestamp": "2023-10-01T11:55:39Z",
+      "event_type": "application",
+      "severity": "low",
+      "app": "email_server",
+      "description": "Failed email delivery (quota exceeded)"
+    },
+    {
+      "timestamp": "2023-10-01T12:00:26Z",
+      "event_type": "intrusion_detection",
+      "severity": "critical",
+      "source_ip": "37.139.45.210",
+      "description": "Exploit kit detected (Angler)"
+    },
+    {
+      "timestamp": "2023-10-01T12:05:13Z",
+      "event_type": "system",
+      "severity": "medium",
+      "description": "Unexpected kernel module unloaded"
+    },
+    {
+      "timestamp": "2023-10-01T12:10:00Z",
+      "event_type": "authentication",
+      "severity": "info",
+      "user": "audit",
+      "description": "Security audit log exported"
+    }
+  ]

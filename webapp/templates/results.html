@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Risultati Analisi</title>
+</head>
+<body>
+    <h1>Analisi dei Log</h1>
+    <ul>
+        {% for log_id, analisi in analisi.items() %}
+            <li><strong>{{ log_id }}</strong>: {{ analisi }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

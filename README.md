@@ -67,7 +67,7 @@ python3 app.py
 ```
 
 La webapp sarà disponibile su http://127.0.0.1:36000 <br/>
-*Se hai necessità di cambiare la porta, basta cambiare il valore nella riga n in `app.py`*
+*Se hai necessità di cambiare la porta, basta cambiare il valore nella riga 48 in `app.py`*
 
 ---
 

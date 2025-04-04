@@ -45,7 +45,7 @@ cd ByteBoo
 
 ## 🛠️ Requisiti
 
-Assicurati di avere Python 3.10+ e un ambiente virtuale attivo:
+Assicurati di avere [Python 3.10+](https://www.python.org/downloads/) e un [ambiente virtuale](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/) attivo:
 
 ```bash
 pip install -r requirements.txt

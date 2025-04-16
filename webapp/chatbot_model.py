@@ -63,7 +63,12 @@ class ChatBot:
     def __init__(self):
         self._pipeline = None
         self.system_prompt = load_prompt()
-        self.conversation_history = []
+        self.conversation_history = [
+            {
+                "role": "system",
+                "content": self.system_prompt
+            }
+        ]
 
     def _ensure_pipeline_loaded(self):
         if self._pipeline is None:
@@ -73,24 +78,9 @@ class ChatBot:
         self._ensure_pipeline_loaded()
         self.conversation_history.append({"role": "user", "content": user_input})
         
-        if not self.conversation_history or self.conversation_history[0]["role"] != "system":
-            self.conversation_history.insert(0, {"role": "system", "content": self.system_prompt})
+        output = self._pipeline(self.conversation_history, max_new_tokens=300, do_sample=True, temperature=0.7, top_p=0.9)
+        new_response = output[0]['generated_text'][-1]['content']
 
-        prompt = self.build_prompt_from_history()
-        output = self._pipeline(prompt, max_new_tokens=300, do_sample=True, temperature=0.7, top_p=0.9)
-        generated_text = output[0]['generated_text']
+        self.conversation_history = output[0]['generated_text']
 
-        new_response = generated_text[len(prompt):].strip()
-        self.conversation_history.append({"role": "assistant", "content": new_response})
         return new_response, self.conversation_history
-
-    def build_prompt_from_history(self):
-        prompt = ""
-        for message in self.conversation_history:
-            if message["role"] == "system":
-                prompt += message["content"] + "\n"
-            elif message["role"] == "user":
-                prompt += "User: " + message["content"] + "\n"
-            elif message["role"] == "assistant":
-                prompt += "AI: " + message["content"] + "\n"
-        return prompt

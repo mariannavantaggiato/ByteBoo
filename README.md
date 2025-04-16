@@ -1,4 +1,4 @@
-## BiteBoo👻
+## BiteBoo👻 - Tesi Sviluppata con SerLAB
 ## 🧠 Cybersecurity Chatbot WebApp
 
 Questo progetto è una webapp basata su Flask che integra un modello LLM open-source ottimizzato via prompt engineering per assistere nella **cybersecurity**.  

@@ -41,6 +41,7 @@ const logExamples = {
     }
 };
 
+
 let conversationHistory = ""; // Mantiene internamente la cronologia (non visualizzata)
 
 async function sendMessage() {
